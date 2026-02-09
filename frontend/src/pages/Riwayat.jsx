@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
-const API = "http://localhost:3000/api";
+const API = "https://absen-magang-production.up.railway.app/api";
 
 function Riwayat({ setPage, token }) {
   const [data, setData] = useState([]);

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import logo from "../assets/bawaslu.png";
 
-const API = "http://localhost:3000/api";
+const API = "https://absen-magang-production.up.railway.app/api";
 
 function Login({ setToken, setRole, setPage }) {
   const [email, setEmail] = useState("");
