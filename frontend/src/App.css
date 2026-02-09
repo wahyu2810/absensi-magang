@@ -1,0 +1,169 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+}
+
+/* Root container */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: #c1121f;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.page-container {
+  padding: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   INPUT
+========================= */
+input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  background: #c1121f;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #a10e19;
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  color: #1f2937;
+}
+
+th {
+  background: #c1121f;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  color: #1f2937;
+}
+
+/* =========================
+   LOGIN
+========================= */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 340px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  margin-bottom: 15px;
+  color: #c1121f;
+  text-align: center;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: white;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar button {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.sidebar button:hover {
+  background: #e5e7eb;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar {
+  background: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   STAT CARD
+========================= */
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: bold;
+  color: #c1121f;
+}
