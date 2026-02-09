@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
-const API = "https://absen-magang-production.up.railway.app/api";
+const API = "https://absen-magang-production.up.railway.app/api/absensi/riwayat";
 
 function Riwayat({ setPage, token }) {
   const [data, setData] = useState([]);
