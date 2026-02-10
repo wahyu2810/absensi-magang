@@ -3,7 +3,7 @@ import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 
-const API = "http://localhost:3000/api";
+const API = import.meta.env.VITE_API_URL + "/api";
 
 function RiwayatAdmin({ setPage, token }) {
   const [data, setData] = useState([]);
@@ -18,8 +18,9 @@ function RiwayatAdmin({ setPage, token }) {
       .get(API + "/absensi/admin/rekap", {
         headers: { Authorization: token },
       })
-      .then((res) => setData(res.data));
-  }, []);
+      .then((res) => setData(res.data))
+      .catch(() => setData([]));
+  }, [token]);
 
   return (
     <div style={styles.layout}>
@@ -46,13 +47,19 @@ function RiwayatAdmin({ setPage, token }) {
                 <tr key={i}>
                   <td>{row.nama}</td>
                   <td>{row.tanggal}</td>
-                  <td>{row.jam_masuk}</td>
-                  <td>{row.jam_pulang}</td>
+                  <td>{row.jam_masuk || "-"}</td>
+                  <td>{row.jam_pulang || "-"}</td>
                   <td>{row.status}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+
+          {data.length === 0 && (
+            <p style={{ marginTop: 15 }}>
+              Belum ada data absensi.
+            </p>
+          )}
         </div>
       </div>
     </div>

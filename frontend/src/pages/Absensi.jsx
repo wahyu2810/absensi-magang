@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
-const API = "http://localhost:3000/api";
+const API = import.meta.env.VITE_API_URL + "/api";
 
 function Absensi({ setPage, token }) {
   const videoRef = useRef(null);

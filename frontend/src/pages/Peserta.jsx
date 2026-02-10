@@ -3,7 +3,7 @@ import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 
-const API = "http://localhost:3000/api";
+const API = import.meta.env.VITE_API_URL + "/api";
 
 function Peserta({ setPage, token }) {
   const [data, setData] = useState([]);
@@ -20,7 +20,7 @@ function Peserta({ setPage, token }) {
       })
       .then((res) => setData(res.data))
       .catch(() => setData([]));
-  }, []);
+  }, [token]);
 
   return (
     <div style={styles.layout}>

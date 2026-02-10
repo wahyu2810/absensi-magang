@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import logo from "../assets/bawaslu.png";
 
-const API = "https://absen-magang-production.up.railway.app/api/auth/login";
+const API = import.meta.env.VITE_API_URL + "/api";
 
 function Login({ setToken, setRole, setPage }) {
   const [email, setEmail] = useState("");
