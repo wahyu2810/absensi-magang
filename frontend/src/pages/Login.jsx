@@ -10,7 +10,7 @@ function Login({ setToken, setRole, setPage }) {
 
   const login = async () => {
     try {
-      const res = await axios.post(API + "/auth/login", {
+      const res = await axios.post(API + "", {
         email,
         password,
       });
