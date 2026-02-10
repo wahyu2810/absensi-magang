@@ -11,7 +11,7 @@ function Register({ setPage }) {
 
   const register = async () => {
     try {
-      await axios.post(API + "", {
+      await axios.post(API + "/auth/register", {
         nama,
         email,
         password,
