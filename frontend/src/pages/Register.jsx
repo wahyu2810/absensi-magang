@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import logo from "../assets/bawaslu.png";
 
-const API = import.meta.env.VITE_API_URL + "/api";
+const API = import.meta.env.VITE_API_URL;
 
 function Register({ setPage }) {
   const [nama, setNama] = useState("");
@@ -11,7 +11,7 @@ function Register({ setPage }) {
 
   const register = async () => {
     try {
-      await axios.post(API + "/auth/register", {
+      await axios.post(API + "/api/auth/register", {
         nama,
         email,
         password,
@@ -27,9 +27,7 @@ function Register({ setPage }) {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        {/* Logo */}
         <img src={logo} alt="Bawaslu" style={styles.logo} />
-
         <h2 style={styles.title}>Daftar Peserta Magang</h2>
 
         <input
